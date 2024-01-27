@@ -28,6 +28,8 @@ def get_implicit_token(scopes):
     fragment = urlparse(auth_response).fragment
     query = parse_qs(fragment)
     access_token = query['access_token'][0]
+
+    # check that the state matches (meant to address CSRF attacks)
     assert query["state"][0] == state
 
     response = requests.get(
