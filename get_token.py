@@ -51,7 +51,7 @@ if __name__ == '__main__':
     client, token = get_refresh_client(scopes)
     print(json.dumps(token, indent=4))
     response = client.get(
-        'https://api.twitch.tv/helix/users?login=Underscore76',
+        'https://api.twitch.tv/helix/users',
         headers={"Client-Id": os.environ['CLIENT_ID']}
     )
     print(client.token)
