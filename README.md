@@ -13,3 +13,7 @@ Very simple version of getting a request client that'll start the initial login 
    1. It'll ask you to click a link which will bring you to a twitch authorize prompt
    2. After authorizing, you'll get to a dead page (NORMAL). copy the result in the address bar and paste that back into your terminal at the prompt
 5. Should print out your tokens, and return a request client that can be used for hitting the twitch api
+
+# Implicit Token Flow
+
+Run `python get_implicit_token.py` (modify scopes as desired) to generate the correct url for getting a token. This token will last 60 days from the time it was generated. Can't be refreshed, but can be used for any of the scopes you requested.

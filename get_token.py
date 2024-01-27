@@ -17,7 +17,6 @@ def get_refresh_client(scopes):
         redirect_uri="http://localhost:3000",
         scope=scopes
     )
-    # print(oauth.get('https://api.twitch.tv/helix/users'))
     authorization_url, state = oauth.authorization_url(
         "https://id.twitch.tv/oauth2/authorize",
     )
